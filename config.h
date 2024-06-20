@@ -13,7 +13,7 @@ static const char *colorname[NUMCOLS] = {
 static const int failonclear = 0;
 
 /* time in seconds before the monitor shuts down */
-static const int monitortime = 5;
+static const int monitortime = 10;
 
 /* insert grid pattern with scale 1:1, the size can be changed with logosize */
 static const int logosize = 75;
@@ -33,3 +33,6 @@ static XRectangle rectangles[9] = {
 	{ 11,	4,	1,	2 },
 
 };
+
+/* time in seconds to cancel lock with mouse movement */
+static const int timetocancel = 3;

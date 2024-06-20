@@ -33,3 +33,6 @@ static XRectangle rectangles[9] = {
 	{ 11,	4,	1,	2 },
 
 };
+
+/* time in seconds to cancel lock with mouse movement */
+static const int timetocancel = 4;
