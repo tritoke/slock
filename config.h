@@ -36,3 +36,6 @@ static XRectangle rectangles[9] = {
 
 /* time in seconds to cancel lock with mouse movement */
 static const int timetocancel = 3;
+
+/* the monitor to display the logo on */
+static const int logomon = 1;

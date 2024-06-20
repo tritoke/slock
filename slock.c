@@ -283,6 +283,7 @@ lockscreen(Display *dpy, struct xrandr *rr, int screen)
 #ifdef XINERAMA
 	XineramaScreenInfo *info;
 	int n;
+	int mon = logomon;
 #endif
 
 	if (dpy == NULL || screen < 0 || !(lock = malloc(sizeof(struct lock))))
@@ -301,10 +302,13 @@ lockscreen(Display *dpy, struct xrandr *rr, int screen)
 	lock->y = DisplayHeight(dpy, lock->screen);
 #ifdef XINERAMA
 	if ((info = XineramaQueryScreens(dpy, &n))) {
-		lock->xoff = info[0].x_org;
-		lock->yoff = info[0].y_org;
-		lock->mw = info[0].width;
-		lock->mh = info[0].height;
+		if (logomon >= n) {
+			mon = 0;
+		}
+		lock->xoff = info[mon].x_org;
+		lock->yoff = info[mon].y_org;
+		lock->mw = info[mon].width;
+		lock->mh = info[mon].height;
 	} else
 #endif
 	{
