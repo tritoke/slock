@@ -3,8 +3,8 @@ static const char *user  = "nobody";
 static const char *group = "nobody";
 
 static const char *colorname[NUMCOLS] = {
-	[BACKGROUND] = "black",     /* after initialization */
-	[INIT]       = "black",     /* DWM logo default */
+	[BACKGROUND] = "#121212",     /* after initialization */
+	[INIT]       = "#49483e",     /* DWM logo default */
 	[INPUT]      = "#66d9ef",   /* during input */
 	[FAILED]     = "#f92672",   /* wrong password */
 };
