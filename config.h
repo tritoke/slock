@@ -4,7 +4,7 @@ static const char *group = "nobody";
 
 static const char *colorname[NUMCOLS] = {
 	[BACKGROUND] = "black",     /* after initialization */
-	[INIT]       = "#2d2d2d",   /* DWM logo default */
+	[INIT]       = "black",     /* DWM logo default */
 	[INPUT]      = "#66d9ef",   /* during input */
 	[FAILED]     = "#f92672",   /* wrong password */
 };
@@ -38,4 +38,4 @@ static XRectangle rectangles[9] = {
 static const int timetocancel = 3;
 
 /* the monitor to display the logo on */
-static const int logomon = 1;
+static const int logomon = 0;
